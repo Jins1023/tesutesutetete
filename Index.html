@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=768, initial-scale=1.0">
+  <title>ロゴアニメーション</title>
+  <style>
+    /* 調整しやすい設定 */
+    .logo {
+      position: absolute;
+      top: 17px;    /* ← 上下位置の初期値 */
+      left: 335px;   /* ← 左右位置の初期値 */
+      width: 743px;  /* ← 横サイズ */
+      height: auto;  /* ← 高さは自動調整 */
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* 上下にふわふわ動くアニメーション */
+    @keyframes float {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- 画像ファイルは「image/logo」に置いてください（例：image/logo.png） -->
+  <img src="image/logo.png" alt="ロゴ" class="logo">
+</body>
+</html>
